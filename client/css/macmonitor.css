@@ -1,0 +1,94 @@
+body {
+	background-color: black;
+}
+
+#main-title {
+	text-align: center;
+	width: 740px;
+	height: 75px;
+	background-color: #C3C904;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#mac-logo {
+	padding-left: 15px;
+	color: white;
+}
+
+#main-panel {
+	width: 700px;
+	height: 480px;
+	background-color: #3B9629;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-left: 40px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	position: relative;
+}
+
+#main-content-square {
+	width: 446px;
+	height: 446px;
+	background-color: #4FF041;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	position: absolute;
+}
+
+#mac-check-title {
+	margin-top: 50px;
+}
+
+.main-square-text-content {
+	text-align: left;
+	font-size: 25px;
+	font-family: "Consolas";
+	margin-top: 30px;
+	padding-left: 10px;
+	color: black;
+	position: relative;
+}
+
+
+
+/*
+#main-circle-bak {
+	width: 446px;
+	height: 446px;
+	//background: #B3F7A6;
+	background-color: #B87400;
+	-moz-border-radius: 223px;
+	-webkit-border-radius: 223px;
+	border-radius: 223px;
+	position: absolute;
+}
+
+#main-circle-content-bak {
+	text-align: center;
+	background-color: inherit;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 75px;
+}
+
+#main-circle-border-bak {
+	width: 450px;
+	height: 450px;
+	margin-left: 100px;
+	background: #106E00;
+	-moz-border-radius: 225px;
+	-webkit-border-radius: 225px;
+	border-radius: 225px;
+	position: absolute;
+}
+*/
+
