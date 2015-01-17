@@ -2,6 +2,8 @@ var express = require('express');
 var	http = require("http");
 var	mongoose = require("mongoose");
 
+console.log("################# Deploying #################");
+
 var port = process.env.PORT || 3000;
 console.log("setting up port: " + port);
 
