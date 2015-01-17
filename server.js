@@ -3,15 +3,16 @@ var	http = require("http");
 var	mongoose = require("mongoose");
 
 var app = express();
+var port = process.env.PORT || 5000;
 
-app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/client'));
+app.use(express.urlencoded());
 
 var mongoURI = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/macmonitor';
 
-// Connect to the amazerrific data store in mongo
+// Connect to the macmonitor data store in mongo
 mongoose.connect(mongoURI);
 
 // Create our Express-powered HTTP server
@@ -21,6 +22,4 @@ app.get('/', function(request, response) {
   response.send("root");
 });
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
-});
+console.log("Listening on " + port);
