@@ -1,0 +1,26 @@
+{
+  "name": "macmonitor",
+  "version": "0.1.2",
+  "description": "Mac Monitor Node.js app using Express 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "mongoose": "3.6.x",
+    "mongodb": "~1.4.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teeceli/macmonitor"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
