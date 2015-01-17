@@ -18,7 +18,7 @@ mongoose.connect(mongoURI);
 http.createServer(app).listen(port);
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.send("root");
 });
 
 app.listen(app.get('port'), function() {
