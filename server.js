@@ -1,7 +1,7 @@
 var express = require('express');
 var	http = require("http");
 var	mongoose = require("mongoose");
-var bodyParser  = require('body-parser');
+//var bodyParser  = require('body-parser');
 var MacController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
@@ -12,11 +12,11 @@ console.log("setting up port: " + port);
 var app = express();
 
 app.use(express.static(__dirname + '/client'));
-app.use(bodyParser.json());
+/*
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
+*/
 var mongoURI = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/macmonitor';
