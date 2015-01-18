@@ -3,9 +3,10 @@ var MacController = {};
 
 MacController.updateStatus = function (req, res) {
 	var date = new Date();
-	var newStatus = new Status({"temperature":req.body.temperature, "humidity":req.body.humidity, "lighting":req.body.lighting, "statusDate":date.toISOString()});
+		//console.log("*** status: " + req.body.temperature + " " + req.temperature);
 
-	newStatus.save(function (err, result) {
+	var status = new Status({"temperature":req.temperature, "humidity":req.body.humidity, "lighting":req.body.lighting, "statusDate":date.toISOString()});
+	status.save(function (err, result) {
 		if (err !== null) {
 			console.log(err);
 			res.send("ERROR");
