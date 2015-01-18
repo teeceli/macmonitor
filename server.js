@@ -1,7 +1,7 @@
 var express = require('express');
 var	http = require("http");
 var	mongoose = require("mongoose");
-var MessageController = require("./client/controllers/mac_controller.js");
+var MacController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
 
