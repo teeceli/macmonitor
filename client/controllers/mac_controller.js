@@ -24,3 +24,5 @@ MacController.updateStatus = function (req, res) {
 		}
 	});
 };
+
+module.exports = MacController;
