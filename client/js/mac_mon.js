@@ -70,7 +70,7 @@ $.getJSON("displayCurrentStatus", function (statusObject) {
 		if (status.lighting === undefined) {status.lighting = '';}
 		if (status.statusDate === undefined) {status.statusDate = '';}
 		var displayHealthRating = document.getElementById("mac-overall-health");
-		var textNode = document.createTextNode(status.getJSON);
+		var textNode = document.createTextNode(status.temperature);
 		displayHealthRating.appendChild(textNode);
 
 	});
