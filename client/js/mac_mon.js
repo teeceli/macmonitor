@@ -57,8 +57,8 @@ delayDisplay(displayHealthRating, textNode, delayParam);
 
 var temperature = 98.6;
 var humidity = 10.0;
-var sunlight = 11.0;
-var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": sunlight};
+var lighting = 11.0;
+var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": lighting};
 
 console.log("##### new status: " + newStatus);
 $.post("/updateStatus", newStatus, function (result) {

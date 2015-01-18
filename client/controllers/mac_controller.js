@@ -5,7 +5,7 @@ MacController.updateStatus = function (req, res) {
 	var date = new Date();
 		//console.log("*** status: " + req.body.temperature + " " + req.temperature);
 
-	var status = new Status({"temperature":req.temperature, "humidity":req.body.humidity, "lighting":req.body.lighting, "statusDate":date.toISOString()});
+	var status = new Status({"temperature":req.temperature, "humidity":req.humidity, "lighting":req.lighting, "statusDate":date.toISOString()});
 	status.save(function (err, result) {
 		if (err !== null) {
 			console.log(err);
