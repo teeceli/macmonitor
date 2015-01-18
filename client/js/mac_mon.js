@@ -55,6 +55,18 @@ var textNode = document.createTextNode("good");
 var delayParam = 8000;
 delayDisplay(displayHealthRating, textNode, delayParam);
 
+var temperature = 98.6;
+var humidity = 10.0;
+var sunlight = 11.0;
+var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": sunlight};
+	
+$.post("/updateStatus", newStatus, function (result) {
+	console.log("newStatus: " + newStatus);
+});
+
+//var mainContent = document.getElementById("main-square-text-content");
+//mainContent.innerHTML = "";
+
 
 
 

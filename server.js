@@ -1,6 +1,7 @@
 var express = require('express');
 var	http = require("http");
 var	mongoose = require("mongoose");
+var MessageController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
 
@@ -24,5 +25,8 @@ http.createServer(app).listen(port);
 app.get('/', function(request, response) {
   response.send("root");
 });
+
+//app.get("/messages.json", MessageController.listStatus); 
+app.post("/updateStatus", MessageController.updateStatus);
 
 console.log("Listening on " + port);

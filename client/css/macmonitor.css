@@ -5,7 +5,7 @@ body {
 #main-title {
 	text-align: center;
 	width: 740px;
-	height: 75px;
+	height: 90px;
 	background-color: #C3C904;
 	margin-left: auto;
 	margin-right: auto;
@@ -25,7 +25,7 @@ body {
 	background-color: #3B9629;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 40px;
+	padding-top: 30px;
 	padding-left: 40px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
@@ -35,7 +35,7 @@ body {
 #main-content-square {
 	width: 446px;
 	height: 446px;
-	background-color: #4FF041;
+	background-color: #97D991;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
@@ -48,7 +48,7 @@ body {
 
 .main-square-text-content {
 	text-align: left;
-	font-size: 25px;
+	font-size: 15px;
 	font-family: "Consolas";
 	margin-top: 30px;
 	padding-left: 10px;
