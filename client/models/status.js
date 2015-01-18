@@ -2,9 +2,9 @@ var mongoose = require("mongoose");
 
 // This is our mongoose model for statuses
 var StatusSchema = mongoose.Schema({
-	temperature: String,
-	humidity: String,
-	lighting: String,
+	temperature: Number,
+	humidity: Number,
+	lighting: Number,
 	statusDate: Date
 });
 
