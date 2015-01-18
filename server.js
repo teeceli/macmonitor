@@ -27,6 +27,6 @@ app.get('/', function(request, response) {
 });
 
 //app.get("/messages.json", MessageController.listStatus); 
-app.post("/updateStatus", MessageController.updateStatus);
+app.post("/updateStatus", MacController.updateStatus);
 
 console.log("Listening on " + port);
