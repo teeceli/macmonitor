@@ -56,6 +56,31 @@ body {
 	position: relative;
 }
 
+#temperature-content-square {
+	float: right;
+	width: 140px;
+	height: 140px;
+	margin-right: 50px;
+	background-color: white;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	position: relative;
+}
+
+#temperature-reading-title {
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+#temperature-reading-score {
+	text-align: right;
+	margin-right: 40px;
+	margin-top: 15px;
+	font-size: 35px;
+}
 
 
 /*
