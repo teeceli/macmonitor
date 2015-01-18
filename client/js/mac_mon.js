@@ -71,7 +71,7 @@ $.getJSON("displayCurrentStatus", function (statusObject) {
 		if (status.statusDate === undefined) {status.statusDate = '';}
 		var displayHealthRating = document.getElementById("mac-overall-health");
 		var textNode = document.createTextNode(status.getJSON);
-
+		displayHealthRating.appendChild(textNode);
 
 	});
 
