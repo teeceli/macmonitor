@@ -55,30 +55,31 @@ var textNode = document.createTextNode("good");
 var delayParam = 8000;
 delayDisplay(displayHealthRating, textNode, delayParam);
 
-var temperature = 98.6;
-var humidity = 10.0;
-var lighting = 11.0;
-var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": lighting};
-
-//$.post("/updateStatus", newStatus, function (result) {});
+var temperature = 0;
+var humidity = 0;
+var lighting = 0;
 
 $.ajaxSetup({ cache: false });
-$.getJSON("displayCurrentStatus", function (statusObject) {
-	statusObject.forEach( function (status) {
-		if (status.temperature === undefined) {status.temperature = '';}
-		if (status.humidity === undefined) {status.humidity = '';}
-		if (status.lighting === undefined) {status.lighting = '';}
-		if (status.statusDate === undefined) {status.statusDate = '';}
-		var displayHealthRating = document.getElementById("mac-overall-health");
-		var textNode = document.createTextNode(status.temperature);
-		displayHealthRating.appendChild(textNode);
+$.getJSON("displayCurrentStatus", function (status) {
 
-	});
+	if (status.temperature === undefined) {status.temperature = '';}
+	if (status.humidity === undefined) {status.humidity = '';}
+	if (status.lighting === undefined) {status.lighting = '';}
+	if (status.statusDate === undefined) {status.statusDate = '';}
+	
+	temperature = status.temperature;
+	humidity = status.humidity;
+	lighting = status.lighting;
+
+	//var displayHealthRating = document.getElementById("mac-overall-health");
+	//var textNode = document.createTextNode(status.temperature);
+	//displayHealthRating.appendChild(textNode);
+
+	console.log("temp: " + temperature);
+	console.log("humidity: " + humidity);
+	console.log("lighting: " + lighting);
 
 });
-
-
-
 
 
 function delayDisplay(element, textNode, delayParam) {
@@ -86,3 +87,12 @@ function delayDisplay(element, textNode, delayParam) {
 		element.appendChild(textNode);
 	}, delayParam);
 }
+
+/* Sample POST
+var temperature = 98.6;
+var humidity = 10.0;
+var lighting = 11.0;
+var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": lighting};
+
+$.post("/updateStatus", newStatus, function (result) {});
+*/

@@ -3,16 +3,19 @@ var MacController = {};
 
 
 MacController.displayCurrentStatus = function (req, res) {
-	// res.json returns the entire object as a JSON file
 	console.log("*** Displaying Current Mac Status:");
 
-	//Status.find({ $query: { $orderby: { statusDate : -1 }}, function (err, status) {
-	Status.find({}, function (err, status) {
+	Status.findOne({ $query: {}, $orderby: { statusDate : -1 }}, function (err, status) {
+		//var jsonStatus = JSON.stringify(status);
+		//console.log("status: " + jsonStatus);
+		console.log("statusDate: " + status.statusDate);
 
-		// check for errors
+		// res.json returns the entire object as a JSON file
 		res.json(status);
+
 	});
 };
+
 
 MacController.updateStatus = function (req, res) {
 	
