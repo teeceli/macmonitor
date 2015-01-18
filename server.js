@@ -31,7 +31,7 @@ app.get('/', function(request, response) {
   response.send("root");
 });
 
-app.get("/displayCurrentStatus", MessageController.distplayCurrentStatus); 
+app.get("/displayCurrentStatus", MessageController.displayCurrentStatus); 
 app.post("/updateStatus", MacController.updateStatus);
 
 console.log("Listening on " + port);
