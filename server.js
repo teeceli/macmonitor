@@ -6,7 +6,7 @@ var MacController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 console.log("setting up port: " + port);
 
 var app = express();
