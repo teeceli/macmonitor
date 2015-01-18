@@ -6,7 +6,7 @@ var MacController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8000;
 console.log("setting up port: " + port);
 
 var app = express();
@@ -31,7 +31,7 @@ app.get('/', function(request, response) {
   response.send("root");
 });
 
-//app.get("/messages.json", MessageController.listStatus); 
+app.get("/displayCurrentStatus", MessageController.distplayCurrentStatus); 
 app.post("/updateStatus", MacController.updateStatus);
 
 console.log("Listening on " + port);

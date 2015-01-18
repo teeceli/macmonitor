@@ -60,10 +60,23 @@ var humidity = 10.0;
 var lighting = 11.0;
 var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": lighting};
 
-$.post("/updateStatus", newStatus, function (result) {});
+//$.post("/updateStatus", newStatus, function (result) {});
 
-//var mainContent = document.getElementById("main-square-text-content");
-//mainContent.innerHTML = "";
+$.ajaxSetup({ cache: false });
+$.getJSON("displayCurrentStatus", function (statusObject) {
+	statusObject.forEach( function (status) {
+		if (status.temperature === undefined) {status.temperature = '';}
+		if (status.humidity === undefined) {status.humidity = '';}
+		if (status.lighting === undefined) {status.lighting = '';}
+		if (status.statusDate === undefined) {status.statusDate = '';}
+		var displayHealthRating = document.getElementById("mac-overall-health");
+		var textNode = document.createTextNode(status.getJSON);
+
+
+	});
+
+});
+
 
 
 
