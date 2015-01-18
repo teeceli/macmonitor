@@ -1,6 +1,7 @@
 var express = require('express');
 var	http = require("http");
 var	mongoose = require("mongoose");
+var bodyParser  = require('body-parser');
 var MacController = require("./client/controllers/mac_controller.js");
 
 console.log("################# Deploying #################");
