@@ -11,6 +11,8 @@ console.log("setting up port: " + port);
 var app = express();
 
 app.use(express.static(__dirname + '/client'));
+app.use(express.bodyParser());
+
 
 var mongoURI = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
