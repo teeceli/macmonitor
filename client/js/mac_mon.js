@@ -60,10 +60,7 @@ var humidity = 10.0;
 var lighting = 11.0;
 var newStatus = {"temperature": temperature, "humidity": humidity, "lighting": lighting};
 
-console.log("##### new status: " + newStatus);
-$.post("/updateStatus", newStatus, function (result) {
-	console.log("newStatus: " + newStatus);
-});
+$.post("/updateStatus", newStatus, function (result) {});
 
 //var mainContent = document.getElementById("main-square-text-content");
 //mainContent.innerHTML = "";
