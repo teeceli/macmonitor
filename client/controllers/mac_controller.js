@@ -9,7 +9,7 @@ MacController.updateStatus = function (req, res) {
 	var status = new Status({"temperature":req.temperature, "humidity":req.humidity, "lighting":req.lighting, "statusDate":date.toISOString()});
 	status.save(function (err, result) {
 		if (err !== null) {
-			console.log(err);
+			console.log("###ERROR: " + err);
 			res.send("ERROR");
 		} else {
 		
@@ -18,6 +18,8 @@ MacController.updateStatus = function (req, res) {
 			Status.find({}, function (err, result) {
 				if (err !== null) {
 					// the element did not get saved!
+					console.log("###ERROR2: " + err);
+
 					res.send("ERROR");
 				}
 				res.json(result);
