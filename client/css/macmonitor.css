@@ -82,19 +82,18 @@ body {
 }
 
 #temperature-reading-title {
-	text-align: right;
+	text-align: center;
 	color: white;
-	margin-right: 20px;
-	margin-top: 30px;
-	font-size: 20px;
+	margin-top: 20px;
+	font-size: 22px;
 }
 
 #temperature-reading-score {
-	text-align: right;
-	margin-right: 40px;
+	text-align: center;
 	margin-top: 15px;
 	font-size: 35px;
-	color: white;
+	color: lightblue;
+	font-weight: bold;
 }
 
 #humidity-content-square {
@@ -112,19 +111,18 @@ body {
 }
 
 #humidity-reading-title {
-	text-align: right;
+	text-align: center;
 	color: white;
-	margin-right: 30px;
-	margin-top: 30px;
-	font-size: 20px;
+	margin-top: 20px;
+	font-size: 22px;
 }
 
 #humidity-reading-score {
-	text-align: right;
-	margin-right: 55px;
+	text-align: center;
 	margin-top: 15px;
 	font-size: 35px;
-	color: white;
+	color: lightblue;
+	font-weight: bold;
 }
 
 #lighting-content-square {
@@ -141,23 +139,22 @@ body {
 }
 
 #lighting-reading-title {
-	text-align: right;
+	text-align: center;
 	color: white;
-	margin-right: 33px;
-	margin-top: 30px;
-	font-size: 20px;
+	margin-top: 20px;
+	font-size: 22px;
 }
 
 #lighting-reading-score {
-	text-align: right;
-	margin-right: 50px;
+	text-align: center;
 	margin-top: 15px;
 	font-size: 35px;
-	color: white;
+	color: lightblue;
+	font-weight: bold;
 }
 
 #footer {
-	color: white;
+	color: lightblue;
 	margin-top: 455px;
 	font-size: 15px;
 	padding: 4px;

@@ -28,7 +28,7 @@ $.getJSON("displayCurrentStatus", function (status) {
 	var textNode = document.createTextNode(lighting);
 	displayLighting.appendChild(textNode);
 
-	jQuery.timeago(new Date());             //=> "less than a minute ago"
+	jQuery.timeago(new Date());
 	var timeAgo = jQuery.timeago(statusDate);
 
 	var lastChecked = document.getElementById("footer");
