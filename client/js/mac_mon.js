@@ -18,6 +18,14 @@ $.getJSON("displayCurrentStatus", function (status) {
 	var textNode = document.createTextNode(temperature);
 	displayTemperature.appendChild(textNode);
 
+	var displayHumidity = document.getElementById("humidity-reading-score");
+	var textNode = document.createTextNode(humidity);
+	displayHumidity.appendChild(textNode);
+
+	var displayLighting = document.getElementById("lighting-reading-score");
+	var textNode = document.createTextNode(lighting);
+	displayLighting.appendChild(textNode);
+
 });
 
 

@@ -1,12 +1,13 @@
 body {
-	background-color: black;
+	background-color: darkolivegreen;
 }
 
 #main-title {
 	text-align: center;
 	width: 740px;
-	height: 90px;
-	background-color: #C3C904;
+	height: 100px;
+	background-color: #044220;
+	font-family: 'Molle', cursive;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
@@ -15,30 +16,32 @@ body {
 }
 
 #mac-logo {
+	font-family: 'Molle', cursive;
 	padding-left: 15px;
+	padding-top: 15px;
 	color: white;
 }
 
 #main-panel {
 	width: 700px;
 	height: 480px;
-	background-color: #3B9629;
+	background-color: black;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 30px;
+	padding-top: 20px;
 	padding-left: 40px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	position: relative;
 }
 
 #main-content-square {
 	width: 446px;
 	height: 446px;
-	background-color: #97D991;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
+	background-color: seagreen;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	position: absolute;
 }
 
@@ -56,20 +59,27 @@ body {
 	position: relative;
 }
 
+#readings-column {
+	width: 140px;
+	height: 500px;
+	float: right;
+}
+
 #temperature-content-square {
 	float: right;
 	width: 140px;
 	height: 140px;
 	margin-right: 50px;
-	background-color: white;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
+	background-color: #28523B;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	position: relative;
 }
 
 #temperature-reading-title {
 	text-align: right;
+	color: white;
 	margin-right: 20px;
 	margin-top: 30px;
 	font-size: 20px;
@@ -80,6 +90,66 @@ body {
 	margin-right: 40px;
 	margin-top: 15px;
 	font-size: 35px;
+	color: white;
+}
+
+#humidity-content-square {
+	float: right;
+	width: 140px;
+	height: 140px;
+	margin-top: 12px;
+	margin-right: 50px;
+	background-color: #28523B;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+#humidity-reading-title {
+	text-align: right;
+	color: white;
+	margin-right: 30px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+#humidity-reading-score {
+	text-align: right;
+	margin-right: 55px;
+	margin-top: 15px;
+	font-size: 35px;
+	color: white;
+}
+
+#lighting-content-square {
+	float: right;
+	width: 140px;
+	height: 140px;
+	margin-top: 12px;
+	margin-right: 50px;
+	background-color: #28523B;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	position: relative;
+}
+
+#lighting-reading-title {
+	text-align: right;
+	color: white;
+	margin-right: 33px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+#lighting-reading-score {
+	text-align: right;
+	margin-right: 50px;
+	margin-top: 15px;
+	font-size: 35px;
+	color: white;
 }
 
 

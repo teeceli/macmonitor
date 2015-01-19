@@ -3,6 +3,7 @@
 	<head>
 		<title> MAC Monitor </title>
 		<link href="css/macmonitor.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Molle:400italic' rel='stylesheet' type='text/css'>
 		<!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
 	</head>
 
@@ -10,7 +11,7 @@
 		
 		<div id="main-title">
 			<div id="mac-logo">
-				<img src="../images/mac_monitor_logo.png" />
+				Mac Monitor <img src="../images/turtle.png" />
 			</div>
 		</div>
 
@@ -26,16 +27,25 @@
 					<div id="mac-overall-health" class="main-square-text-content"></div>
 				</div>
 			</div>
+			<div id="readings-column">
 			<div id="temperature-content-square">
 				<div id="temperature-reading-title">Temperature</div>
 				<div id="temperature-reading-score"></div>
+			</div>
+			<div id="humidity-content-square">
+				<div id="humidity-reading-title">Humidity</div>
+				<div id="humidity-reading-score"></div>
+			</div>
+			<div id="lighting-content-square">
+				<div id="lighting-reading-title">Lighting</div>
+				<div id="lighting-reading-score"></div>
+			</div>
 			</div>
 		</div>
 
 
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="js/jquery.timeago.js" type="text/javascript"></script>
-
-		<<script src="js/mac_mon.js"></script>
+		<script src="js/mac_mon.js"></script>
 	</body>
 </html>
