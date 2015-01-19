@@ -3,9 +3,8 @@ var MacController = {};
 
 
 MacController.displayCurrentStatus = function (req, res) {
-	
-	Status.findOne({ $query: {}, $orderby: { statusDate : -1 }}, function (err, status) {
 
+	Status.findOne({ $query: {}, $orderby: { statusDate : -1 }}, function (err, status) {
 		// res.json returns the entire object as a JSON file
 		res.json(status);
 

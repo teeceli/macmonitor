@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Share&subset=latin,latin-ext);
+
 body {
 	background-color: darkolivegreen;
 }
@@ -7,7 +10,6 @@ body {
 	width: 740px;
 	height: 100px;
 	background-color: #044220;
-	font-family: 'Molle', cursive;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
@@ -16,7 +18,8 @@ body {
 }
 
 #mac-logo {
-	font-family: 'Molle', cursive;
+	font-family: 'Lobster', cursive;
+	font-size: 65px;
 	padding-left: 15px;
 	padding-top: 15px;
 	color: white;
@@ -36,7 +39,7 @@ body {
 }
 
 #main-content-square {
-	width: 446px;
+	width: 466px;
 	height: 446px;
 	background-color: seagreen;
 	-moz-border-radius: 5px;
@@ -60,9 +63,10 @@ body {
 }
 
 #readings-column {
-	width: 140px;
+	width: 1px;
 	height: 500px;
 	float: right;
+	font-family: 'Share', cursive;
 }
 
 #temperature-content-square {
@@ -151,6 +155,83 @@ body {
 	font-size: 35px;
 	color: white;
 }
+
+#footer {
+	color: white;
+	margin-top: 455px;
+	font-size: 15px;
+	padding: 4px;
+}
+
+#contact-me {
+	float: right;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#contact-me:hover {
+	float: right;
+	color: white;
+	font-size: 15px;
+	background-color: #044220;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#who-is-mac {
+	float: right;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#who-is-mac:hover {
+	float: right;
+	color: white;
+	background-color: #044220;
+	font-size: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+#what-is-this {
+	float: right;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#what-is-this:hover {
+	float: right;
+	color: white;
+	background-color: #044220;
+	font-size: 15px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#separator {
+	float: right;
+	padding-left: 4px;
+	padding-right: 4px;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+
+
+
 
 
 /*

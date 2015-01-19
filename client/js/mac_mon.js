@@ -1,6 +1,7 @@
 var temperature;
 var humidity;
 var lighting;
+var statusDate;
 
 $.ajaxSetup({ cache: false });
 $.getJSON("displayCurrentStatus", function (status) {
@@ -13,6 +14,7 @@ $.getJSON("displayCurrentStatus", function (status) {
 	temperature = status.temperature;
 	humidity = status.humidity;
 	lighting = status.lighting;
+	statusDate = status.statusDate;
 
 	var displayTemperature = document.getElementById("temperature-reading-score");
 	var textNode = document.createTextNode(temperature);
@@ -25,6 +27,14 @@ $.getJSON("displayCurrentStatus", function (status) {
 	var displayLighting = document.getElementById("lighting-reading-score");
 	var textNode = document.createTextNode(lighting);
 	displayLighting.appendChild(textNode);
+
+	jQuery.timeago(new Date());             //=> "less than a minute ago"
+	var timeAgo = jQuery.timeago(statusDate);
+
+	var lastChecked = document.getElementById("footer");
+	var dateLastChecked = "Conditions last checked " + timeAgo;
+	var textNode = document.createTextNode(dateLastChecked);
+	lastChecked.appendChild(textNode);
 
 });
 
