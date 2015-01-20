@@ -2,17 +2,16 @@
 @import url(http://fonts.googleapis.com/css?family=Share&subset=latin,latin-ext);
 
 body {
-	background-color: darkolivegreen;
+	background-color: cadetblue;
 }
 
-#main-title {
+#main-layout {
 	text-align: center;
-	width: 740px;
-	height: 100px;
+	width: 55%;
 	background-color: #044220;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 40px;
+	margin-top: 3%;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }
@@ -26,13 +25,9 @@ body {
 }
 
 #main-panel {
-	width: 700px;
-	height: 480px;
 	background-color: black;
-	margin-left: auto;
-	margin-right: auto;
 	padding-top: 20px;
-	padding-left: 40px;
+	padding-left: 25px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	position: relative;
@@ -41,15 +36,13 @@ body {
 #main-content-square {
 	width: 466px;
 	height: 446px;
+	width: 65%;
+	height: 90%;
 	background-color: seagreen;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	position: absolute;
-}
-
-#mac-check-title {
-	margin-top: 50px;
 }
 
 .main-square-text-content {
@@ -64,7 +57,6 @@ body {
 
 #readings-column {
 	width: 1px;
-	height: 500px;
 	float: right;
 	font-family: 'Share', cursive;
 }
@@ -78,7 +70,9 @@ body {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	position: relative;
+	position: absolute;
+	margin-top: 1%;
+	margin-left: -25%;
 }
 
 #temperature-reading-title {
@@ -100,14 +94,15 @@ body {
 	float: right;
 	width: 140px;
 	height: 140px;
-	margin-top: 12px;
+	margin-top: 21%;
 	margin-right: 50px;
+	margin-left: -25%;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	display: inline-block;
-	position: relative;
+	position: absolute;
 }
 
 #humidity-reading-title {
@@ -129,13 +124,14 @@ body {
 	float: right;
 	width: 140px;
 	height: 140px;
-	margin-top: 12px;
 	margin-right: 50px;
+	margin-left: -25%;
+	margin-top: 41%;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	position: relative;
+	position: absolute;
 }
 
 #lighting-reading-title {
@@ -155,7 +151,7 @@ body {
 
 #footer {
 	color: lightblue;
-	margin-top: 455px;
+	margin-top: 65%;
 	font-size: 15px;
 	padding: 4px;
 }
@@ -225,43 +221,3 @@ body {
 	font-size: 15px;
 	cursor: pointer;
 }
-
-
-
-
-
-
-/*
-#main-circle-bak {
-	width: 446px;
-	height: 446px;
-	//background: #B3F7A6;
-	background-color: #B87400;
-	-moz-border-radius: 223px;
-	-webkit-border-radius: 223px;
-	border-radius: 223px;
-	position: absolute;
-}
-
-#main-circle-content-bak {
-	text-align: center;
-	background-color: inherit;
-	width: 300px;
-	height: 300px;
-	position: absolute;
-	margin-top: 70px;
-	margin-left: 75px;
-}
-
-#main-circle-border-bak {
-	width: 450px;
-	height: 450px;
-	margin-left: 100px;
-	background: #106E00;
-	-moz-border-radius: 225px;
-	-webkit-border-radius: 225px;
-	border-radius: 225px;
-	position: absolute;
-}
-*/
-
