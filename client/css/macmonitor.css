@@ -71,7 +71,8 @@ body {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	position: absolute;
-	margin-top: 1%;
+	//margin-top: 1%;
+	margin-top: 5px;
 	margin-left: -25%;
 }
 
@@ -95,6 +96,8 @@ body {
 	width: 20%;
 	height: 28%;
 	margin-top: 21%;
+	margin-top: 157px;
+
 	margin-right: 50px;
 	margin-left: -25%;
 	background-color: #28523B;
@@ -127,6 +130,8 @@ body {
 	margin-right: 50px;
 	margin-left: -25%;
 	margin-top: 41%;
+	margin-top: 310px;
+
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
