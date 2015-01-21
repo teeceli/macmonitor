@@ -112,11 +112,11 @@ function addContactMe() {
 
 	var mainContentElement = document.getElementById('main-square-text-content');
 	mainContentElement.innerHTML = '';
-	$("#main-square-text-content").append("<div id='contact-form'>Send Me A Message:<br />")
+	$("#main-square-text-content").append("<div id='contact-form'>")
 							 	 .append("<table cellpadding='10px'>")
-								 .append("<tr><td><br />Name: <br><input id='contactName' type='text' size='25' class='inputClass'></td></tr>") 
-								 .append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' size='30' class='inputClass'></td></tr>")
-								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='50'></textarea></td></tr>")
+								 .append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
+								 .append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
+								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='45'></textarea></td></tr>")
 								 .append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
 								 .append("</table></div>");
 
