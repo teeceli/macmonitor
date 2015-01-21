@@ -63,8 +63,8 @@ body {
 
 #temperature-content-square {
 	float: right;
-	width: 140px;
-	height: 140px;
+	width: 20%;
+	height: 28%;
 	margin-right: 50px;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
@@ -92,8 +92,8 @@ body {
 
 #humidity-content-square {
 	float: right;
-	width: 140px;
-	height: 140px;
+	width: 20%;
+	height: 28%;
 	margin-top: 21%;
 	margin-right: 50px;
 	margin-left: -25%;
@@ -122,8 +122,8 @@ body {
 
 #lighting-content-square {
 	float: right;
-	width: 140px;
-	height: 140px;
+	width: 20%;
+	height: 28%;
 	margin-right: 50px;
 	margin-left: -25%;
 	margin-top: 41%;
