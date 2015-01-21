@@ -18,6 +18,12 @@ var main = function () {
 		loadGraph();
 	});
 
+	$("#contact-me").on("click", function () {
+		addContactMe();
+	});
+
+	
+
 	//Display Initial Stats
 	$.ajaxSetup({ cache: false });
 	$.getJSON("displayCurrentStatus", function (status) {
@@ -101,6 +107,45 @@ function addHowItsDone() {
 	textNode.style = "float: right";
 	mainContentElement.appendChild(textNode);
 }
+
+function addContactMe() {
+
+	var mainContentElement = document.getElementById('main-square-text-content');
+	mainContentElement.innerHTML = '';
+	$("#main-square-text-content").append("<div id='contact-form'>Send Me A Message:<br />")
+							 	 .append("<table cellpadding='10px'>")
+								 .append("<tr><td><br />Name: <br><input id='contactName' type='text' size='25' class='inputClass'></td></tr>") 
+								 .append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' size='30' class='inputClass'></td></tr>")
+								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='50'></textarea></td></tr>")
+								 .append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
+								 .append("</table></div>");
+
+	$("#contact-button").on("click", function () {
+		submitContact();
+	});
+
+	function submitContact() {
+		var contactName = $("#contactName").val();
+		var contactEmail = $("#contactEmail").val();
+		var contactMessage = $("#contactMessage").val();
+
+		var newContact = {"contactName": contactName, "contactEmail": contactEmail, "contactMessage": contactMessage};
+		
+		$.post("/submitContact", newContact, function (result) {
+
+	 		$("#contactName").val("");
+	 		$("#contactEmail").val("");
+	 		$("#contactMessage").val("");
+	 		
+			$("#contact-button").hide();
+	 		$('#thank-you').append("Message Sent: Thank you!");
+		});
+		
+	}
+
+}
+
+
 
 $(document).ready(main);
 

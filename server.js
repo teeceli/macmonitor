@@ -33,5 +33,7 @@ app.get('/', function(request, response) {
 
 app.get("/displayCurrentStatus", MacController.displayCurrentStatus); 
 app.post("/updateStatus", MacController.updateStatus);
+app.post("/submitContact", MacController.submitContact);
+
 
 console.log("Listening on " + port);

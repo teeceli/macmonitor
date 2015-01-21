@@ -246,3 +246,12 @@ body {
 	color: white;
 	font-size: 15px;
 }
+
+#contact-form {
+	font-weight: bold;
+}
+
+#thank-you {
+	font-weight: bold;
+	color: navy;
+}
