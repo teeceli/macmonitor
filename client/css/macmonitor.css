@@ -56,24 +56,25 @@ body {
 }
 
 #readings-column {
-	width: 1px;
+	width: 200px;
 	float: right;
-	font-family: 'Share', cursive;
+	height: 450px;
+	position: relative;
 }
 
 #temperature-content-square {
-	float: right;
-	width: 20%;
-	height: 28%;
+	//float: right;
+	width: 75%;
+	height: 30%;
 	margin-right: 50px;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	position: absolute;
-	//margin-top: 1%;
-	margin-top: 5px;
-	margin-left: -25%;
+	margin-top: 1%;
+	//margin-top: 5px;
+	//margin-left: -25%;
 }
 
 #temperature-reading-title {
@@ -92,19 +93,18 @@ body {
 }
 
 #humidity-content-square {
-	float: right;
-	width: 20%;
-	height: 28%;
-	margin-top: 21%;
-	margin-top: 157px;
+	//float: right;
+	width: 75%;
+	height: 30%;
+	margin-top: 75%;
+	//margin-top: 170px;
 
 	margin-right: 50px;
-	margin-left: -25%;
+	//margin-left: -25%;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	display: inline-block;
 	position: absolute;
 }
 
@@ -124,13 +124,14 @@ body {
 }
 
 #lighting-content-square {
-	float: right;
-	width: 20%;
-	height: 28%;
+	//float: right;
+	width: 75%;
+	height: 30%;
 	margin-right: 50px;
-	margin-left: -25%;
-	margin-top: 41%;
-	margin-top: 310px;
+	//margin-left: -25%;
+	margin-top: 150%;
+	//margin-top: 335px;
+	//margin-bottom: 20%;
 
 	background-color: #28523B;
 	-moz-border-radius: 3px;
