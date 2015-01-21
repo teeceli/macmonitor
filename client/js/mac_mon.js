@@ -69,8 +69,8 @@ function addWhoIsMac() {
 
 	var macText = "Mac is a one year old Southeastern Box Turtle that we rescued from a bonfire when she was at most a few weeks old. " + 
 		"Her nest had unfortunately been destroyed in the fire and we decided to take her in. After some research we realized that turtles take " +
-		"an enormous amount of responsibility and care. After one year she appears as happy as a turtle can be. This page is set up to monitor her " +
-		"living conditions for a more perfect terrarium environment. Please read How Its Done for more information.";
+		"an enormous amount of care and fortunately after one year she appears as happy as a turtle can be. This page is set up to monitor the " +
+		"living conditions in her terrarium environment. Please read \"How It's Done\" for more info on how this app is set up.";
 
 	var textNode = document.createTextNode(macText);
 	textNode.style = "float: right";
