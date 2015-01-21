@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Share&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
 body {
 	background-color: slategray;
@@ -45,14 +45,19 @@ body {
 	position: absolute;
 }
 
-.main-square-text-content {
+#main-square-text-content {
 	text-align: left;
-	font-size: 15px;
-	font-family: "Consolas";
+	font-size: 20px;
 	margin-top: 30px;
 	padding-left: 10px;
 	color: black;
+	font-family: 'Raleway', sans-serif;
 	position: relative;
+}
+
+#mac-photo {
+	float: left;
+	padding-right: 10px;
 }
 
 #readings-column {
@@ -69,6 +74,7 @@ body {
 #temperature-content-square {
 	width: 75%;
 	height: 30%;
+	font-family: 'Raleway', sans-serif;
 	margin-right: 50px;
 	margin-top: 1%;
 	background-color: #28523B;
@@ -90,12 +96,14 @@ body {
 	margin-top: 15px;
 	font-size: 35px;
 	color: lightblue;
+	font-family: serif;
 	font-weight: bold;
 }
 
 #humidity-content-square {
 	width: 75%;
 	height: 30%;
+	font-family: 'Raleway', sans-serif;
 	margin-right: 50px;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
@@ -116,12 +124,14 @@ body {
 	margin-top: 15px;
 	font-size: 35px;
 	color: lightblue;
+	font-family: serif;
 	font-weight: bold;
 }
 
 #lighting-content-square {
 	width: 75%;
 	height: 30%;
+	font-family: 'Raleway', sans-serif;
 	margin-right: 50px;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
@@ -142,6 +152,7 @@ body {
 	margin-top: 15px;
 	font-size: 35px;
 	color: lightblue;
+	font-family: serif;
 	font-weight: bold;
 }
 
@@ -150,6 +161,25 @@ body {
 	margin-top: 65%;
 	font-size: 15px;
 	padding: 4px;
+}
+
+#home {
+	float: right;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#home:hover {
+	float: right;
+	color: white;
+	font-size: 15px;
+	background-color: #044220;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #contact-me {
@@ -215,5 +245,4 @@ body {
 	padding-right: 4px;
 	color: white;
 	font-size: 15px;
-	cursor: pointer;
 }
