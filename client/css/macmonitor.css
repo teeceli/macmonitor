@@ -220,7 +220,7 @@ body {
 	cursor: pointer;
 }
 
-#what-is-this {
+#how-its-done {
 	float: right;
 	color: white;
 	font-size: 15px;
@@ -229,7 +229,7 @@ body {
 	padding-right: 5px;
 }
 
-#what-is-this:hover {
+#how-its-done:hover {
 	float: right;
 	color: white;
 	background-color: #044220;
