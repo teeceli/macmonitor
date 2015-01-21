@@ -249,6 +249,7 @@ body {
 
 #contact-form {
 	font-weight: bold;
+	font-size: 20px;
 }
 
 #thank-you {
@@ -257,6 +258,6 @@ body {
 }
 
 .contact-input {
-	width: 300px;
+	width: 185px;
 	height: 20px;
 }

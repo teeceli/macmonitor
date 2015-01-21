@@ -116,7 +116,7 @@ function addContactMe() {
 							 	 .append("<table cellpadding='10px'>")
 								 .append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
 								 .append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
-								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='30'></textarea></td></tr>")
+								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='35'></textarea></td></tr>")
 								 .append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
 								 .append("</table></div>");
 
