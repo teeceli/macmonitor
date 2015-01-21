@@ -62,19 +62,20 @@ body {
 	position: relative;
 }
 
+#content-spacer {
+	padding: 75px;
+}
+
 #temperature-content-square {
-	//float: right;
 	width: 75%;
 	height: 30%;
 	margin-right: 50px;
+	margin-top: 1%;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	position: absolute;
-	margin-top: 1%;
-	//margin-top: 5px;
-	//margin-left: -25%;
 }
 
 #temperature-reading-title {
@@ -93,14 +94,9 @@ body {
 }
 
 #humidity-content-square {
-	//float: right;
 	width: 75%;
 	height: 30%;
-	margin-top: 75%;
-	//margin-top: 170px;
-
 	margin-right: 50px;
-	//margin-left: -25%;
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -124,15 +120,9 @@ body {
 }
 
 #lighting-content-square {
-	//float: right;
 	width: 75%;
 	height: 30%;
 	margin-right: 50px;
-	//margin-left: -25%;
-	margin-top: 150%;
-	//margin-top: 335px;
-	//margin-bottom: 20%;
-
 	background-color: #28523B;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
