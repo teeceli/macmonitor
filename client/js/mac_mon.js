@@ -10,6 +10,10 @@ var main = function () {
 		addWhoIsMac();
 	});
 
+	$("#how-its-done").on("click", function () {
+		addHowItsDone();
+	});
+
 	$("#home").on("click", function () {
 		loadGraph();
 	});
@@ -47,24 +51,25 @@ var main = function () {
 		var dateLastChecked = "Conditions last checked " + timeAgo;
 		var textNode = document.createTextNode(dateLastChecked);
 		lastChecked.appendChild(textNode);
-
 	});
+
+	addWhoIsMac();
 };
 
 function loadGraph() {
 	var mainContentElement = document.getElementById('main-square-text-content');
 	mainContentElement.innerHTML = '';
+	addWhoIsMac();
 }
 
 function addWhoIsMac() {
 
 	var mainContentElement = document.getElementById('main-square-text-content');
 	mainContentElement.innerHTML = '';
-	var span = document.createElement("span");
 
 	var macPhoto = document.createElement("img");
 	macPhoto.src = "../images/mac.png";
-	macPhoto.id = "mac-photo";
+	macPhoto.id = "content-photo";
 	mainContentElement.appendChild(macPhoto);
 
 	var macText = "Mac is a one year old Southeastern Box Turtle that we rescued from a bonfire when she was at most a few weeks old. " + 
@@ -73,6 +78,26 @@ function addWhoIsMac() {
 		"living conditions in her terrarium environment. Please read \"How It's Done\" for more info on how this app is set up.";
 
 	var textNode = document.createTextNode(macText);
+	textNode.style = "float: right";
+	mainContentElement.appendChild(textNode);
+}
+
+function addHowItsDone() {
+
+	var mainContentElement = document.getElementById('main-square-text-content');
+	mainContentElement.innerHTML = '';
+
+	var arduinoPhoto = document.createElement("img");
+	arduinoPhoto.src = "../images/arduino.png";
+	arduinoPhoto.id = "content-photo";
+	mainContentElement.appendChild(arduinoPhoto);
+
+	var arduinoText = "I developed this app to be used as a dashboard for the current living conditions of my turtle terrarium. " + 
+		"I am using an Arduino Uno microcontroller with an Ethernet shield that is making HTTP post requests to this website that is backed by a MongoDb database. " + 
+		"The Arduino is connected to a temperature sensor, a humidity sensor, and a light sensor and I am gathering these stats every hour. " +
+		"I built the site using NodeJs and jQuery and it is hosted for free using Heroku. The code is open source and can be found in my github repository"
+
+	var textNode = document.createTextNode(arduinoText);
 	textNode.style = "float: right";
 	mainContentElement.appendChild(textNode);
 }
