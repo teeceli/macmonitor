@@ -206,8 +206,8 @@ function initialPageLoad() {
 		if (status.lighting === undefined) {status.lighting = '';}
 		if (status.statusDate === undefined) {status.statusDate = '';}
 
-		temperature = status.temperature;
-		humidity = status.humidity;
+		temperature = status.temperature + '  F';
+		humidity = status.humidity + '%';
 		lighting = status.lighting;
 		statusDate = status.statusDate;
 
