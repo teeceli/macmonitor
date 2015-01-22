@@ -1,10 +1,15 @@
 <!doctype html>
 <html>
 	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+		<script type="text/javascript" src="js/jqplot.canvasTextRenderer.min.js"></script>
+  		<script type="text/javascript" src="js/jqplot.canvasAxisLabelRenderer.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
 		<link href="css/macmonitor.css" rel="stylesheet" type="text/css">
+
 		<link rel="shortcut icon" href="../images/favicon.ico">
 		<title> Mac Monitor </title>
-		
 	</head>
 	<body>
 		<div id="main-layout">
@@ -16,7 +21,11 @@
 			</div>
 		<div id="main-panel">
 			<div id="main-content-square">
-				<div id="main-square-text-content"></div>
+				<div id="main-square-text-content">
+					<div class="charting" id="temp-chart"></div>
+					<br /><div id='separator'></div>
+					<div class="charting" id="humidity-chart"></div>
+				</div>
 			</div>
 			<div id="readings-column">
 				<div id="temperature-content-square">
@@ -51,7 +60,6 @@
 			}
 		</script>
 
-		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="js/jquery.timeago.js" type="text/javascript"></script>
 		<script src="js/mac_mon.js"></script>
 	</body>

@@ -48,7 +48,7 @@ body {
 #main-square-text-content {
 	text-align: left;
 	font-size: 20px;
-	margin-top: 30px;
+	margin-top: 10px;
 	padding-left: 10px;
 	color: black;
 	font-family: 'Raleway', sans-serif;
@@ -260,4 +260,10 @@ body {
 .contact-input {
 	width: 185px;
 	height: 20px;
+}
+
+.charting {
+	width: 450px;
+	height: 200px;
+	color: white;
 }
