@@ -126,7 +126,7 @@ function submitContact() {
 	 		$("#contactMessage").val("");
 	 		
 			$("#contact-button").hide();
-			$('#spinner').append("<img src='../images/spinner.gif' />");
+			$('#spinner').append("<img src='../images/mac-spinner.gif' />");
 			setTimeout(function(){ $('#spinner').hide(); $("#thank-you").append("Sent..."); }, 3000);
 	 		
 		});
