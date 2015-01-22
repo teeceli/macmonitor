@@ -61,14 +61,12 @@ function addWhoIsMac() {
 	macPhoto.id = "content-photo";
 	mainContentElement.appendChild(macPhoto);
 
-	var macText = "Mac is a one year old Southeastern Box Turtle that we rescued from a bonfire when she was at most a few weeks old. " + 
-		"Her nest had unfortunately been destroyed in the fire and we decided to take her in. After some research we realized that turtles take " +
-		"an enormous amount of care and fortunately after one year she appears as happy as a turtle can be. This page is set up to monitor the " +
-		"living conditions in her terrarium environment. Please read \"How It's Done\" for more info on how this app is set up.";
-
-	var textNode = document.createTextNode(macText);
-	textNode.style = "float: right";
-	mainContentElement.appendChild(textNode);
+	$("#main-square-text-content")
+				.append("Mac is a one year old Southeastern Box Turtle that we rescued from a bonfire when she was at most a few ")
+				.append(" weeks old. Her nest had unfortunately been destroyed in the fire and we decided to take her in. After some research we ")
+				.append("realized that turtles take an enormous amount of care and fortunately after one year she appears as happy as a turtle can be. ")
+				.append("This page is set up to monitor the living conditions in her terrarium environment. Please read \"How It's Done\" for more info ")
+				.append("on how this app is set up.");
 }
 
 
@@ -82,14 +80,12 @@ function addHowItsDone() {
 	arduinoPhoto.id = "content-photo";
 	mainContentElement.appendChild(arduinoPhoto);
 
-	var arduinoText = "I developed this app to be used as a dashboard for the current living conditions of my turtle terrarium. " + 
-		"I am using an Arduino Uno microcontroller with an Ethernet shield that is making HTTP post requests to this website that is backed by a MongoDb database. " + 
-		"The Arduino is connected to a temperature sensor, a humidity sensor, and a light sensor and I am gathering these stats every hour. " +
-		"I built the site using NodeJs and jQuery and it is hosted for free using Heroku. The code is open source and can be found in my github repository"
-
-	var textNode = document.createTextNode(arduinoText);
-	textNode.style = "float: right";
-	mainContentElement.appendChild(textNode);
+	$("#main-square-text-content")
+				.append("I developed this app to be used as a dashboard for the current living conditions in my turtle's terrarium. ")
+		 		.append("I am using an Arduino Uno microcontroller with an Ethernet shield that is making HTTP post requests to this web server that is ")
+		 		.append("backed by a MongoDb database. The Arduino is connected to a temperature sensor, a humidity sensor, and a light sensor and I am ")
+		 		.append("gathering these stats every 30min. I built the site using NodeJs and jQuery and it is hosted for free using Heroku. The code is ")
+		 		.append("open source and can be found in my <a href='https://github.com/teeceli'>GitHub Repository</a>");
 }
 
 
@@ -97,13 +93,14 @@ function addContactMe() {
 
 	var mainContentElement = document.getElementById('main-square-text-content');
 	mainContentElement.innerHTML = '';
-	$("#main-square-text-content").append("<div id='contact-form'>Send me a message:")
-							 	 .append("<table cellpadding='10px'>")
-								 .append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
-								 .append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
-								 .append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='35'></textarea></td></tr>")
-								 .append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
-								 .append("</table></div>");
+	$("#main-square-text-content")
+				.append("<div id='contact-form'>Send me a message:")
+				.append("<table cellpadding='10px'>")
+				.append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
+				.append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
+				.append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='35'></textarea></td></tr>")
+				.append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
+				.append("</table></div>");
 
 	$("#contact-button").on("click", function () {
 		submitContact();
@@ -235,10 +232,6 @@ function initialPageLoad() {
 	displayTemperatureData(tempData, timeTicks);
 	displayHumidityChart(humidityData, timeTicks);
 }
-
-
-
-
 
 $(document).ready(main);
 

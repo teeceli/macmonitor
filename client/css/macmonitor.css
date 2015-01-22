@@ -5,6 +5,10 @@ body {
 	background-color: slategray;
 }
 
+a {
+	color: white;
+}
+
 #main-layout {
 	text-align: center;
 	width: 55%;
