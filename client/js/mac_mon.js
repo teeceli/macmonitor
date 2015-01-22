@@ -99,7 +99,7 @@ function addContactMe() {
 				.append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
 				.append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
 				.append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='35'></textarea></td></tr>")
-				.append("<tr><td><button id='contact-button'>Submit</button><span id='thank-you'></span></td></tr>")
+				.append("<tr><td><button id='contact-button'>Submit</button><span id='spinner'></span><span id='thank-you'></span></td></tr>")
 				.append("</table></div>");
 
 	$("#contact-button").on("click", function () {
@@ -115,15 +115,22 @@ function submitContact() {
 
 	var newContact = {"contactName": contactName, "contactEmail": contactEmail, "contactMessage": contactMessage};
 	
-	$.post("/submitContact", newContact, function (result) {
+	if (contactMessage.length === 0) {
+		$("#main-square-text-content").append("<span id='bad-message'>Please enter something</span>");
+	} else {
+		$.post("/submitContact", newContact, function (result) {
 
- 		$("#contactName").val("");
- 		$("#contactEmail").val("");
- 		$("#contactMessage").val("");
- 		
-		$("#contact-button").hide();
- 		$('#thank-you').append("Message Sent: Thank you!");
-	});
+			$("#bad-message").hide();
+	 		$("#contactName").val("");
+	 		$("#contactEmail").val("");
+	 		$("#contactMessage").val("");
+	 		
+			$("#contact-button").hide();
+			$('#spinner').append("<img src='../images/spinner.gif' />");
+			setTimeout(function(){ $('#spinner').hide(); $("#thank-you").append("Sent..."); }, 3000);
+	 		
+		});
+	}
 
 }
 
