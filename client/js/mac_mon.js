@@ -65,8 +65,7 @@ function addWhoIsMac() {
 				.append("Mac is a one year old Southeastern Box Turtle that we rescued from a bonfire when she was at most a few ")
 				.append(" weeks old. Her nest had unfortunately been destroyed in the fire and we decided to take her in. After some research we ")
 				.append("realized that turtles take an enormous amount of care and fortunately after one year she appears as happy as a turtle can be. ")
-				.append("This page is set up to monitor the living conditions in her terrarium environment. Please read \"How It's Done\" for more info ")
-				.append("on how this app is set up.");
+				.append("This page is set up to monitor the living conditions in her terrarium.");
 }
 
 
@@ -85,7 +84,7 @@ function addHowItsDone() {
 		 		.append("I am using an Arduino Uno microcontroller with an Ethernet shield that is making HTTP post requests to this web server that is ")
 		 		.append("backed by a MongoDb database. The Arduino is connected to a temperature sensor, a humidity sensor, and a light sensor and I am ")
 		 		.append("gathering these stats every 30min. I built the site using NodeJs and jQuery and it is hosted for free using Heroku. The code is ")
-		 		.append("open source and can be found in my <a href='https://github.com/teeceli'>GitHub Repository</a>");
+		 		.append("open source and can be found in my <a href='https://github.com/teeceli/macmonitor'>GitHub Repository</a>");
 }
 
 
@@ -97,7 +96,7 @@ function addContactMe() {
 				.append("<div id='contact-form'>Send me a message:")
 				.append("<table cellpadding='10px'>")
 				.append("<tr><td><br />Name: <br><input id='contactName' type='text' class='contact-input'></td></tr>") 
-				.append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'></td></tr>")
+				.append("<tr><td></br />Email Address: <br><input id='contactEmail' type='text' class='contact-input'> *optional</td></tr>")
 				.append("<tr><td><br />Message: <br><textarea id='contactMessage' rows='10' cols='35'></textarea></td></tr>")
 				.append("<tr><td><button id='contact-button'>Submit</button><span id='spinner'></span><span id='thank-you'></span></td></tr>")
 				.append("</table></div>");
@@ -115,8 +114,8 @@ function submitContact() {
 
 	var newContact = {"contactName": contactName, "contactEmail": contactEmail, "contactMessage": contactMessage};
 	
-	if (contactMessage.length === 0) {
-		$("#main-square-text-content").append("<span id='bad-message'>Please enter something</span>");
+	if (contactMessage.length === 0 || contactName.length === 0) {
+		$("#main-square-text-content").append("<span id='bad-message'>Please enter your name and a message</span>");
 	} else {
 		$.post("/submitContact", newContact, function (result) {
 
