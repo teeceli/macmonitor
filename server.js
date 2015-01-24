@@ -32,6 +32,7 @@ app.get('/', function(request, response) {
 });
 
 app.get("/displayCurrentStatus", MacController.displayCurrentStatus); 
+app.get("/getGraphData", MacController.getGraphData);
 app.post("/updateStatus", MacController.updateStatus);
 app.post("/submitContact", MacController.submitContact);
 

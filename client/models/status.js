@@ -5,7 +5,7 @@ var StatusSchema = mongoose.Schema({
 	temperature: Number,
 	humidity: Number,
 	lighting: Number,
-	statusDate: Date
+	statusDate: String
 });
 
 var Status = mongoose.model("Status", StatusSchema);

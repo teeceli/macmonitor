@@ -12,6 +12,15 @@ MacController.displayCurrentStatus = function (req, res) {
 	});
 };
 
+MacController.getGraphData = function (req, res) {
+
+	Status.find({ $query: {}, $orderby: { statusDate : 1}, $maxScan:10}, function (err, status) {
+		// res.json returns the entire object as a JSON file
+		res.json(status);
+
+	});
+};
+
 
 MacController.updateStatus = function (req, res) {
 	
@@ -20,17 +29,15 @@ MacController.updateStatus = function (req, res) {
 	console.log("*** temperature: " + req.body.temperature);
 	console.log("*** humidity: " + req.body.humidity);
 	console.log("*** lighting: " + req.body.lighting);
-	console.log("*** statusDate: " + date.toISOString());
+	console.log("*** statusDate: " + date);
 
-	var status = new Status({"temperature":req.body.temperature, "humidity":req.body.humidity, "lighting":req.body.lighting, "statusDate":date.toISOString()});
+	var status = new Status({"temperature":req.body.temperature, "humidity":req.body.humidity, "lighting":req.body.lighting, "statusDate":date});
 	status.save(function (err, result) {
 		if (err !== null) {
 			console.log("###ERROR: " + err);
 			res.send("ERROR");
 		} else {
 		
-			// our client expects *all* of the todo items to be returned,
-			// so we do an additional request to maintain compatibility
 			Status.find({}, function (err, result) {
 				if (err !== null) {
 					// the element did not get saved!
@@ -62,9 +69,7 @@ MacController.submitContact = function (req, res) {
 			console.log("###ERROR: " + err);
 			res.send("ERROR");
 		} else {
-		
-			// our client expects *all* of the todo items to be returned,
-			// so we do an additional request to maintain compatibility
+
 			Contact.find({}, function (err, result) {
 				if (err !== null) {
 					// the element did not get saved!

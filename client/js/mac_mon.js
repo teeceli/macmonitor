@@ -2,15 +2,20 @@ var temperature;
 var humidity;
 var lighting;
 var statusDate;
-var timeTicks, tempData, humidityData;
+
+var timeTicks = [];
+var tempData = [];
+var humidityData = [];
+
+
+//timeTicks = [[1, "6:30"], [2, "7:00"], [3, "7:30"], [4, "8:00"], [5, "8:30"], [6, "9:00"], [7, "9:30"], [8, "10:00"], [9, "10:30"], [10, "11:00"]];
+//tempData = [86,87,95,93,90,81,84,74,66,55];
+//humidityData = [55,64,63,67,62,70,71,74,66,67];
 
 var main = function () {
 
-	timeTicks = [[1, "6:30"], [2, "7:00"], [3, "7:30"], [4, "8:00"], [5, "8:30"], [6, "9:00"], [7, "9:30"], [8, "10:00"], [9, "10:30"], [10, "11:00"]];
-	tempData = [86,87,95,93,90,81,84,74,66,55];
-	humidityData = [55,64,63,67,62,70,71,74,66,67];
 
-	initialPageLoad();
+	getGraphData();
 
 	$("#who-is-mac").on("click", function () {
 		addWhoIsMac();
@@ -135,6 +140,7 @@ function submitContact() {
 
 
 function displayTemperatureData(tempData, timeTicks) {
+
 	var tempChart = jQuery.jqplot('temp-chart', [tempData], {
 	       title: {
 	      	text: 'Temperature Readings (F)',
@@ -158,7 +164,7 @@ function displayTemperatureData(tempData, timeTicks) {
 	      axes: {
 	        xaxis: {
 	          pad: 0,
-	          ticks: timeTicks
+	         ticks: timeTicks
 	        },
 	        yaxis: {
 	        }
@@ -167,6 +173,7 @@ function displayTemperatureData(tempData, timeTicks) {
 }
 
 function displayHumidityChart(humidityData, timeTicks) {
+
 	var humidityChart = jQuery.jqplot('humidity-chart', [humidityData], {
 	       title: {
 	      	text: 'Humidity Readings (%)',
@@ -226,8 +233,8 @@ function initialPageLoad() {
 		var textNode = document.createTextNode(lighting);
 		displayLighting.appendChild(textNode);
 
-		jQuery.timeago(new Date());
-		var timeAgo = jQuery.timeago(statusDate);
+		var timeAgoDate = new Date(statusDate);
+		var timeAgo = jQuery.timeago(timeAgoDate);
 
 		var lastChecked = document.getElementById("footer");
 		var dateLastChecked = "Conditions last checked " + timeAgo;
@@ -237,6 +244,41 @@ function initialPageLoad() {
 
 	displayTemperatureData(tempData, timeTicks);
 	displayHumidityChart(humidityData, timeTicks);
+}
+
+function getGraphData() {
+
+	$.getJSON("getGraphData", function (data) {
+		for (i in data) {
+			if (!data[i].hasOwnProperty(i)) {
+
+			if (data[i].temperature === undefined) {data[i].temperature = '';}
+			if (data[i].humidity === undefined) {data[i].humidity = '';}
+			if (data[i].statusDate === undefined) {data[i].statusDate = '';}
+
+			var temperature = data[i].temperature;
+			var humidity = data[i].humidity;
+			var statusDate = data[i].statusDate;
+
+			var date = new Date(statusDate);
+			var mins = ('0'+date.getMinutes()).slice(-2);
+			var time = date.getHours() + ":" + mins;
+			var position = i;
+			position++;
+			var tickElement = [];
+			tickElement.push(position);
+			tickElement.push(time);
+
+			timeTicks.push(tickElement);
+			tempData.push(temperature);
+			humidityData.push(humidity);
+			}
+		}
+		
+		initialPageLoad();
+
+	});
+
 }
 
 $(document).ready(main);
